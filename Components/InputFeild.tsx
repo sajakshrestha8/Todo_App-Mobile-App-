@@ -3,22 +3,27 @@ import { StyleSheet, TextInput } from "react-native";
 type props = {
   placeholder: string;
   onChangeText: (text: string) => void;
-  value: string | undefined;
+  // value: string | undefined;
 };
 
-const InputFeild = ({ value, placeholder, onChangeText }: props) => {
+const InputFeild = ({ placeholder, onChangeText }: props) => {
   return (
     <TextInput
       placeholder={placeholder}
       onChangeText={onChangeText}
-      value={value}
+      // value={value}
+      style={styles.inputFeild}
     ></TextInput>
   );
 };
 
 const styles = StyleSheet.create({
   inputFeild: {
-    borderColor: "black",
+    padding: 8,
+    paddingLeft: 10,
+    borderRadius: 5,
+    backgroundColor: "#f3f7ff",
+    fontSize: 12,
   },
 });
 
