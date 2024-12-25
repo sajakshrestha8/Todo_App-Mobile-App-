@@ -19,9 +19,7 @@ A simple and interactive ToDo application built with **React Native**. This app 
 
 | Add Task Page | Task List |
 |---------------|-----------|
-| (https://github.com/user-attachments/assets/6b25dd00-fed6-4366-9e25-f77e3f5564c3)
-| (https://github.com/user-attachments/assets/0eb096cb-d946-44e1-a27d-49f66196e963)
-|
+| ![Add Task]![image](https://github.com/user-attachments/assets/455e353c-2abe-4687-b0cc-f5d6483f7428) | ![Task List]![image](https://github.com/user-attachments/assets/b124ca95-f97c-4e35-b6d9-573f3649e5d0) |
 
 ---
 
