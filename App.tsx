@@ -4,17 +4,31 @@ import InputFeild from "./Components/InputFeild";
 import { useState } from "react";
 import Checkbox from "expo-checkbox";
 
+type Task = {
+  isCompleted: boolean | undefined;
+  task: string | undefined;
+};
+
 const App = () => {
-  const [changeText, setChangeText] = useState<string>();
-  const [addedTask, setAddedTask] = useState<Array<string | undefined>>([
-    "I will code",
-    "I will go to bed",
-  ]);
+  const [changeText, setChangeText] = useState<string>("");
   const [isCompleted, setIsCompleted] = useState<boolean>(false);
+  const [addedTask, setAddedTask] = useState<Array<Task>>([
+    {
+      isCompleted: isCompleted,
+      task: "Ma khana khanxu aba",
+    },
+    {
+      isCompleted: isCompleted,
+      task: "Ma code hanxu aba",
+    },
+  ]);
   // const [clearText, setClearText] = useState<string>();
   const handleAdd = () => {
     // setClearText("");
-    setAddedTask([...addedTask, changeText]);
+    setAddedTask([
+      ...addedTask,
+      { isCompleted: isCompleted, task: changeText },
+    ]);
   };
 
   function handleTextFeild(text: string) {
@@ -71,13 +85,26 @@ const App = () => {
               >
                 <Checkbox
                   onValueChange={() => {
-                    isCompleted ? setIsCompleted(false) : setIsCompleted(true);
+                    let updatedStatus = addedTask.map((task, i) =>
+                      i === index
+                        ? { ...task, isCompleted: !task.isCompleted }
+                        : task
+                    );
+                    setAddedTask(updatedStatus);
                   }}
-                  value={isCompleted}
+                  value={value.isCompleted}
                 />
               </View>
               <View style={styles.taskText}>
-                <Text>{value}</Text>
+                <Text
+                  style={{
+                    textDecorationLine: value.isCompleted
+                      ? "line-through"
+                      : "none",
+                  }}
+                >
+                  {value.task}
+                </Text>
               </View>
               <View style={styles.taskBtn}>
                 <Pressable
