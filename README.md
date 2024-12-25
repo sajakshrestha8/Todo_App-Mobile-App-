@@ -19,7 +19,9 @@ A simple and interactive ToDo application built with **React Native**. This app 
 
 | Add Task Page | Task List |
 |---------------|-----------|
-| ![Add Task](./screenshots/add-task.png) | ![Task List](./screenshots/task-list.png) |
+| ![Add Task](![image](https://github.com/user-attachments/assets/6b25dd00-fed6-4366-9e25-f77e3f5564c3)
+) | ![Task List](![image](https://github.com/user-attachments/assets/0eb096cb-d946-44e1-a27d-49f66196e963)
+) |
 
 ---
 
@@ -40,5 +42,26 @@ Ensure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/todo-app.git
+   git clone https://github.com/sajakshrestha8/todo-app.git
    cd todo-app
+
+2. Install dependencies
+
+   ```bash
+   npm install || yarn install
+
+3. Start the development server
+
+  ```bash
+  npm start || yarn start
+
+```
+4. Scan the QR code in the Expo Go app or run the app in emulator
+
+### Technologies Used
+- React Native: For building the app
+- Expo: For easy development and testing
+- TypeScript: For type-safe development
+
+  #Thankyouu
+
