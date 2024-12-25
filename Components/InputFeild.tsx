@@ -3,15 +3,15 @@ import { StyleSheet, TextInput } from "react-native";
 type props = {
   placeholder: string;
   onChangeText: (text: string) => void;
-  // value: string | undefined;
+  value: string | undefined;
 };
 
-const InputFeild = ({ placeholder, onChangeText }: props) => {
+const InputFeild = ({ value, placeholder, onChangeText }: props) => {
   return (
     <TextInput
       placeholder={placeholder}
       onChangeText={onChangeText}
-      // value={value}
+      value={value}
       style={styles.inputFeild}
     ></TextInput>
   );

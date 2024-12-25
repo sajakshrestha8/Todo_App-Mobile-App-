@@ -29,6 +29,7 @@ const App = () => {
       ...addedTask,
       { isCompleted: isCompleted, task: changeText },
     ]);
+    setChangeText("");
   };
 
   function handleTextFeild(text: string) {
@@ -57,7 +58,7 @@ const App = () => {
           <InputFeild
             placeholder="Add some task here..."
             onChangeText={handleTextFeild}
-            // value={""}
+            value={changeText}
           />
         </View>
         <View style={styles.addButton}>
@@ -93,6 +94,9 @@ const App = () => {
                     setAddedTask(updatedStatus);
                   }}
                   value={value.isCompleted}
+                  style={{
+                    borderRadius: 50,
+                  }}
                 />
               </View>
               <View style={styles.taskText}>
@@ -122,6 +126,23 @@ const App = () => {
                   }}
                 >
                   <Text style={styles.btnText}>Delete</Text>
+                </Pressable>
+              </View>
+              <View style={styles.taskBtn}>
+                <Pressable
+                  onPress={() =>
+                    alert(
+                      "chinta nagaram chadai nai edit pani garna milxa yeslai"
+                    )
+                  }
+                  style={{
+                    padding: 5,
+                    borderColor: "black",
+                    backgroundColor: "#087f49",
+                    borderRadius: 4,
+                  }}
+                >
+                  <Text style={styles.btnText}>Edit</Text>
                 </Pressable>
               </View>
             </View>
