@@ -51,7 +51,7 @@ Ensure you have the following installed:
 3. Start the development server
 
   ```bash
-  npm start || yarn start
+     npm start || yarn start
 
 ```
 4. Scan the QR code in the Expo Go app or run the app in emulator
